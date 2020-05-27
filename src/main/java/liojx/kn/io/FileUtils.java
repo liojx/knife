@@ -17,7 +17,11 @@ import java.util.List;
 @Data
 public class FileUtils {
 
-
+	/**
+	 * 创建path的文件
+	 * @param path
+	 * @return
+	 */
 	public static File createFileByPath(String path) {
 		try {
 			File file = new File(path);
@@ -28,6 +32,11 @@ public class FileUtils {
 		return null;
 	}
 
+	/**
+	 * 列出所有文件，封装到response对象中
+	 * @param rootFile       根文件
+	 * @param response      接收对象
+	 */
 	public static void listAllFilesByRootFile(File rootFile, Response response) {
 		try {
 			if (rootFile.isDirectory()) {
@@ -55,6 +64,9 @@ public class FileUtils {
 		public int dirCount;
 		public int fileCount;
 		public List<File> allFiles = Lists.newArrayList();
+		/**
+		 * @Description: 装所有文件
+		 */
 		public List<File> files = Lists.newArrayList();
 	}
 }
