@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.File;
+import java.io.*;
 import java.util.List;
 
 /**
@@ -56,6 +56,34 @@ public class FileUtils {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * 获取每一行数据
+	 * @param filePath
+	 * @return
+	 */
+	public static List<String> fileToString(String filePath){
+		File file = new File(filePath);
+		BufferedReader reader = null;
+		StringBuffer sb = new StringBuffer();
+		List<String> list = Lists.newArrayList();
+		try {
+			FileInputStream fis = new FileInputStream(file);
+			InputStreamReader isr = new InputStreamReader(fis, "GBK");
+			reader = new BufferedReader(isr);
+			String line = null;
+			while((line = reader.readLine()) != null){
+				sb.append(line + "\\n");
+				list.add(line);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+//		System.out.println("result -----> \n" + sb.toString());
+		return list;
 	}
 
 	@Data
