@@ -159,6 +159,9 @@ public class App
 	    System.out.println(lambdaTest1.test(1,2)); // 3
 	    System.out.println(lambdaTest2.test(1, 2)); // 3
 
+
+	    System.out.println("如果你觉得自由是快乐，爱是犯了软弱成就的差错");
+	    System.out.println("慢慢长夜里，没有你的日子里");
     }
 
 	interface LambdaTest<T, R> {
