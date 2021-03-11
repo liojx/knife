@@ -159,6 +159,7 @@ public class App
 	    System.out.println(lambdaTest1.test(1,2)); // 3
 	    System.out.println(lambdaTest2.test(1, 2)); // 3
 	    System.out.println("这一行是在dev分支改，测试cherry-pick");
+	    System.out.println("测试cherry-pick,commit 2");
     }
 
 	interface LambdaTest<T, R> {
