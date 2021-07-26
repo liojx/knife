@@ -7,6 +7,7 @@
     <modules>
         <module>lamada</module>
         <module>listenerEvent</module>
+        <module>io</module>
     </modules>
 
     <!-- 引入springboot 2.0:Spring Boot的版本仲裁中心，控制了所有依赖的版本号-->
